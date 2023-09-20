@@ -1,1 +1,14 @@
-https://github.com/selina-p/100DaysOfPython.git
+print("Welcome, this is the seconds in a year calculator!")
+print()
+year = int(
+    input("The year for which you would like to calculate the seconds of: "))
+print()
+whichYear = year % 4
+if whichYear == "0":
+    print("Oh, you've chosen a leap year!")
+    answer = 60 * 60 * 24 * 366
+else:
+    print("Ah, that's a short year!")
+    answer = 60 * 60 * 24 * 365
+print()
+print("In", year, "there are", answer, "seconds!")
