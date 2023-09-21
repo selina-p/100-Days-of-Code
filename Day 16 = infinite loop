@@ -1,0 +1,21 @@
+print("Ievadi vārdus dziesmai Milžu cīņa!")
+print()
+while True:
+  word1 = input("Šei milži izsalkuši, tiem nav ko...")
+  if word1 == "ēst":
+    break
+print()
+while True:
+  word2 = input("Tiem atliek mežā lāčus...")
+  if word2 == "plēst":
+    break
+while True:
+  word3 = input("Tiem intelektuālas...")
+  if word3 == "potences":
+    break
+print()
+while True:
+  word3 = input("Tie nepavisam nav no...")
+  if word3 == "provinces":
+    break 
+print("MILŽU CĪŅAS, MILŽU CĪŅAS!")
