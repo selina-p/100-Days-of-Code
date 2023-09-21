@@ -1,0 +1,13 @@
+animal = input("What animal do you want?: ")
+if animal == "Cow":
+  print("Cow goes moo")
+elif animal == "Pig":
+  print("Pig goes oink oink")
+elif animal == "Dog":
+  print("Dog goes vuff vuff")
+else:
+  print("Sorry, I know only a few animals")
+print()
+exit = input("Do you want to exit? ")
+while exit != "Yes":
+  exit = input("Do you want to exit?" )
