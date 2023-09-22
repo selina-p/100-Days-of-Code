@@ -1,0 +1,7 @@
+print("Loan calculator")
+print()
+print("$1000 over 10 years at 5% APR")
+loan = 1000
+for year in range (10):
+  loan += (0.05*loan)
+  print("Year", year+1, "is", round(loan, 1))
