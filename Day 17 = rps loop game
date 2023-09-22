@@ -1,0 +1,56 @@
+from getpass import getpass as input
+print("M O R E  E P I C  🗿  📄  ✂️  B A T T L E")
+print()
+print("Round 1")
+print()
+print("Select your move (R, P or S)")
+print()
+player1score = 0
+player2score = 0
+print()
+while True:
+  player1 = input("Player 1 > ")
+  player2 = input("Player 2 > ")
+  print()
+  if player1 == "R" or player1 == "r":
+    if player2 == "S" or player2 == "s":
+      print("Woohoo, 🗿 smashed the ✂️  and player 1 is the winner!")
+      player1score += 1
+    elif player2 == "P" or player2 == "p":
+      print("Woohoo, 📄  wrapped the 🗿 and player 2 is the winner!")
+      player2score += 1
+    elif player2 == "R" or player2 == "r":
+      print("Oh, it's 🗿 vs 🗿 ! Try again!")
+    else:
+      print("looks like Player 2 used something other than 🗿 , ✂️ or 📄 , so try again!")
+  elif player1 == "S" or player1 == "s":
+    if player2 == "S" or player2 == "s":
+      print("Oh, it's ✂️ vs ✂️ ! Try again!")
+    elif player2 == "P" or player2 == "p":
+      print("Woohoo, ✂️  cut the  📄  and player 1 is the winner!")
+      player1score += 1
+    elif player2 == "R" or player2 == "r":
+      print("Woohoo, 🗿 smashed the  ✂️  and player 2 is the winner!")
+      player2score += 1
+    else:
+      print("looks like Player 2 used something other than 🗿 , ✂️ or 📄 , so try again!")
+  elif player1 == "P" or player1 == "p":
+    if player2 == "S" or player2 == "s":
+      print("Woohoo, ✂️  cut the  📄  and player 2 is the winner!")
+      player2score += 1
+    elif player2 == "P" or player2 == "p":
+      print("Oh, it's 📄 vs 📄 ! Try again!")
+    elif player2 == "R" or player2 == "r":
+      print("Woohoo,📄 wrapped the 🗿 and player 1 is the winner!")
+      player1score += 1
+    else:
+      print("looks like Player 2 used something other than 🗿 , ✂️ or 📄 , so try again!")
+  else:
+    print("looks like Player 1 used something other than 🗿 , ✂️ or 📄 , so try again!")
+  print("Player 1 has", player1score, "wins.")
+  print("Player 2 has", player2score, "wins.")
+  if player1score == 3 or player2score == 3:
+    print("Thanks for playing!")
+    exit()
+  else:
+    continue
