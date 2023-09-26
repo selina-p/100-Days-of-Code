@@ -1,0 +1,26 @@
+import random
+print("Totally Random One-Million-to-One\n")
+guesses = 0
+for i in range(1000000):
+    randomNumber = random.randint(1,1000000)
+while True:
+  print()
+  guess = int(input("What is your guess?\n"))
+  if guess < randomNumber:
+    print("Ah, a bit higher!")
+    guesses += 1
+  elif guess > randomNumber:
+    print("Ah, a bit lower!")
+    guesses += 1
+  elif guess == randomNumber:
+    print("Correct")
+    break
+print()
+if guesses == 1:
+  print ("It took you only", guesses, "guess to get it right!")
+else:
+  print ("It took you only", guesses, "guesses to get it right!")
+
+
+    
+  
