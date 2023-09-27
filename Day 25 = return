@@ -1,0 +1,21 @@
+print("CHARACTER HEALTH GENERATOR\n")
+
+import random
+def dice(sides):
+  result = random.randint(1, sides)
+  return result
+
+def sixeight():
+  roll6 = dice(6)
+  roll8 = dice(8)
+  health = roll6 * roll8
+  return health
+
+another = "yes"
+
+while another == "yes":
+  input("Name your warrior: ")
+  health = str(sixeight())
+  print("Their health is ", health, "health points")
+  print()
+  another = input("Do you want to create another character?")
