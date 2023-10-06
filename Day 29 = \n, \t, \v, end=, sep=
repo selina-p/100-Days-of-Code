@@ -1,0 +1,22 @@
+print("Superb Subroutine")
+print()
+def newPrint(color, word):
+  if color=="red":
+    print("\033[1;31m", word, sep="", end="")
+  elif color=="pink":
+    print("\033[1;35m", word, sep="", end="")
+  elif color=="blue":
+    print("\033[1;34m", word, sep="", end="")
+  else:
+    print("\033[0m", word, sep="", end="")
+
+print("With my ", end="")
+newPrint("pink", "new program")
+newPrint("normal", " I can just call red('and') ")
+newPrint("red", "and")
+newPrint("reset", " that word will just appear in the colour I set it to.\n")
+print()
+newPrint("normal", "With no ")
+newPrint("blue", "weird gaps!\n")
+print()
+newPrint("normal", "Epic!")
