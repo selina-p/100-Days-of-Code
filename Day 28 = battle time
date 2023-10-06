@@ -1,0 +1,90 @@
+import random, os, time
+
+def roll(sides):
+  result = random.randint(1,sides)
+  return result
+  
+def health():
+  healthStat = (roll(6) * roll(12))/2 + 10
+  return healthStat
+
+def strenght():
+  strenghtStat = (roll(6) * roll(12))/2 + 12
+  return strenghtStat
+
+health1 = health()
+health2 = health()
+
+strenght1 =strenght()
+strenght2 =strenght()
+
+os.system("clear")
+print(" ⚔️ CHARACTER BUILDER ⚔️\n")
+time.sleep(1)
+player1 = input("Name your legend:\n")
+print()
+type1 = input("Character Type (Human, Elf, Wizard, Orc):\n")
+print()
+print(type1, player1)
+print("HEALTH:", health1)
+print("STRENGHT:", strenght1)
+print()
+print("Who are they battling with?")
+print()
+player2 = input("Name your legend:\n")
+print()
+type2 = input("Character Type (Human, Elf, Wizard, Orc):\n")
+print()
+print(type2, player2)
+print("HEALTH:", health2)
+print("STRENGHT:", strenght2)
+print("May your name go down in Legend...")
+
+round = 1
+winner = None
+
+while True:
+  time.sleep(5)
+  os.system("clear")
+  print(" ⚔️ BATTLE TIME ⚔️")
+  print()
+  print("The battle begins!\n")
+
+  difference = abs(strenght1 - strenght2) + 1
+  play1turn = roll(6)
+  play2turn = roll(6)
+
+  if play2turn > play1turn:
+    health1 -= difference
+    print(player2, " wins the first blow and ", player1, " takes a hit, with 8 damage")
+    print(type1, player1)
+  elif play2turn < play1turn:
+    health2 -= difference
+    print(player1, " wins the first blow and ", player2, " takes a hit, with 8 damage")
+    print(type1, player1)
+  else:
+    print("Their swords clash and they draw round", round)
+    round += 1
+
+  print()
+  print(type1, player1)
+  print("HEALTH:", health1)
+  print(type2, player2)
+  print("HEALTH:", health2)
+  print()
+  
+  if health1 <= 0:
+    print(player1, "has died!")
+    winner = player2
+    break
+  elif health2 <= 0:
+    print(player2, "has died!")
+    winner = player1
+    break
+
+time.sleep(3)
+os.system("clear")
+print("⚔️ DRUMROLL, PLEASE ⚔️")
+print()
+print(winner, "has won in", round, "rounds")
+
