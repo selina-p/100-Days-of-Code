@@ -1,0 +1,10 @@
+print("30 Days Down – What did you think?\n")
+print()
+day = 1
+for i in range(1,31):
+  response = input(f"Day {i}:\n")
+  print()
+  statement = f"You thought Day {i} was {response}"
+  print(f"{statement:^40}")
+  print(f"{response:^40}")
+  print()
