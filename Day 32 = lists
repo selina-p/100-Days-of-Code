@@ -1,0 +1,5 @@
+greetings = ["Čau", "Hello", "Salut", "Hola", "Privet", "Nǐ hǎo", "Yā Yō", "Hallo", "Hiv", "Oi", "Olá", "Hallo", "Anyoung", "Ahoi"]
+
+import random
+i = random.randint(0, 13)
+print(f"{greetings[i]}!")
