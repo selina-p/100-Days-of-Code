@@ -1,0 +1,27 @@
+title = f"ToDo List Manager\n"
+print(f"{title:^50}")
+
+tdlist = []
+
+def printList():
+  print()
+  for job in tdlist:
+    print(job)
+  print()
+
+while True:
+  choice = input("Do you want to view, add or edit the todo list?\n")
+  print()
+  if choice == "add":
+    job = input("What do you want to add to the list?\n")
+    tdlist.append(job)
+  elif choice == "view":
+    printList()
+    
+  elif choice == "edit":
+    job = input("What do you want to remove fromt he list?\n")
+    if job in tdlist:
+      tdlist.remove(job)
+    else:
+      print(f"{job} was not in the list")
+  
