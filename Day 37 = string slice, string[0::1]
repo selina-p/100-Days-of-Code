@@ -1,0 +1,9 @@
+print("🌟Star Wars Name Generator🌟")
+print()
+name = input("Input your name > ").strip().title()
+surname = input("Input your surname > ").strip().lower()
+maidenname = input("Input your mother's maiden name > ").strip().title()
+city = input("Input the city where you were born > ").strip().lower()
+
+swname = f"{name[:3]}{surname[:3]} {maidenname[:2]}{city[-3:]}"
+print("Your Star Wars name is", {swname})
