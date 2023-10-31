@@ -1,0 +1,19 @@
+def colourchange(letter):
+  if letter == "r":
+    print("\033[0;31m", end="") # change text colour to red
+  elif letter == "b":
+    print("\033[0;34m", end="") #  change colour to blue
+  elif letter == "g":
+    print("\033[0;32m", end="") # change colour to green
+  elif letter== "p":
+    print("\033[0;36m", end="") # change colour to pink
+  elif letter == "y":
+    print("\033[0;33m", end="") # change colour to yellow
+  elif letter == " ":
+    print("\033[0m", end="") # back to default
+
+sentence = input("Please write a sentence you want to have a rainbow explode over! > ")
+print()
+for letter in sentence:
+  colourchange(letter.lower())
+  print(letter, end="")
