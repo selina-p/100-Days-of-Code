@@ -1,0 +1,52 @@
+import os, time
+tdlist = []
+
+title = f"ToDo List Manager\n"
+print(f"{title:^50}")
+
+def printList():
+  os.system("clear")
+  print()
+  for job in tdlist:
+    print(job)
+  print()
+  time.sleep(2)
+  os.system("clear")
+
+def prettyPrint():
+  os.system("clear")
+  print("tdlist")
+  print()
+  counter = 1
+  for job in tdlistl:
+    print(f"{counter}. {job}")
+    counter += 1
+  time.sleep(1)
+
+while True:
+  choice = input("Do you want to view, add, edit or remove an item from the to do list?\n")
+  print()
+  if choice == "add":
+    job = input("What do you want to add to the list?\n")
+    tdlist.append(job)
+  elif choice == "view":
+    printList()
+  elif choice == "remove":
+    job = input("What do you want to remove from the list?\n")
+    if job in tdlist:
+      really = input("Do you REALLY want to remove the job from the To Do List?\n".lower())
+      if really[0] == "y":
+        if job in tdlist:
+          tdlist.remove(job)
+        else:
+          print(f"{job} was not in the list")
+  elif choice == "edit":
+    job = input("What do you want to edit?\n")
+    newjob = input("What do you want to change it to?\n")
+    if i in range(0, len(tdlist)):
+      if tdlist[i] == item:
+        tdlist[i] = new
+  elif choice == "delete":
+    tdlist = []
+  time.sleep(1)
+  os.system("clear")
